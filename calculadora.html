@@ -1,157 +1,57 @@
-﻿	<html>
-	<head>
-		<title>CALCULADORA</title>
-		<script type="text/javascript"
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+﻿<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="calculadora.css">
+	<title>CALCULADORA</title>
+</head>
 
-		<script> /*JS INTERNO*/
-			function limpar(){
-				document.getElementById('formula').value = '';/*LIMPA A TEXT*/
-			}
+<html>
 
-			function contatena(valor){
-				document.getElementById('formula').value += valor; /*CONCATENA OS VALORES*/
-			}
+<body>
 
-			function calcular(){
-				var res = 0;
-				
-				res = document.getElementById('formula').value;
-				document.getElementById('formula').value = ''; /*LIMPA A TELA PARA MOSTRAR O RES!!*/
-				document.getElementById('formula').value = eval(res); /*EVAL: pega o conteudo em string e faz calculo mat*/
-			}
+	<div class="calculadora">
+		<div class="header">
+			<h1>Calculadora</h1>
+			<input type="text" id="formula" disabled/>
+			<input id="posiC" type="submit" class="btn" value="C" onclick=" limpar();" />
+		</div>
 
-	$(document).ready(function(){
-    $("td").click(function(){
-        $("#formula").css("background-color", "#FA5E5E").css("color","black");
+		<table>
+			<tr>
+				<td><input type="submit" class="btn" value="7" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="8" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="9" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btnsimb" value="/" onclick=" contatena('/');" /></td>
+			</tr>
 
-    $("#posiC").click(function(){
-        $("#formula").css("background-color", "white").css("color","red");
+			<tr>
+				<td><input type="submit" class="btn" value="4" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="5" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="6" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btnsimb" value="x" onclick=" contatena('*');" /></td>
+			</tr>
 
-    });
-    });
-});
+			<tr>
+				<td><input type="submit" class="btn" value="1" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="2" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="3" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btnsimb" value="-" onclick=" contatena('-');" /></td>
+			</tr>
 
-
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓CSS↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-			
-
-		</script>
-
-		<style>/*CSS INTERNO*/
-
-		#btnsimb{
-			background-color:tomato;
-
-
-
-		}
-			.btn {
-				width: 80;
-				height: 80;
-				border: groove;
-				border-radius: 25%;
-				background-color: pink;
-				border-color: gray;
-				/*border-top-width: 5;
-				border-bottom-width: 5;*/
-				font-size: 50;
-				display: block;
-			}
-
-			.btn:hover{
-				background-color: #36EC94;
-				border-color: white;
-			}
-
-			#formula{
-				width: 325;
-				height: 60;
-				position: relative;
-				top: 2;
-				left: -60;
-				font-size: 40;
-				font-family: arial black;
-				background-color: none;
-			}
-
-			.box{
-				 width: 350px;
-				 height: 530px;
-				 padding: 100px;
-				 margin: 0px auto;
-				 background-image: naruto.jpg ;
-				 border:solid;
-				 border-radius: 15%;
-				 position: relative;
-				 top: 0;
-				}
-
-			h1{color: white;
-				font-size: 30;
-				font-family: Segoe Script;
-				position: relative;
-				top: -50px;
-				left: 65px;
-
-			}
-
-			#posiC{position: relative;
-				background-color: navajowhite;
-				top: -69;
-				left: 290;
-			}
-
-			/*#posthings{position: relative;
-				top: -69;
-				left: 8;
-			}*/
-
-			body{background:linear-gradient(to right, #ffafaf, #aeaeff);}
-
-		</style>
-	<body>
-
-	<div class="box"> 
-	<div> <h1>Calculadora</h1> 	
-	<input type="text" id="formula"/>
-	<input id="posiC" type="submit" class="btn" value="C" onclick=" limpar();"/>
-
-<hr>
-	<table><!-- e finaliza por -->
-
-		<tr>
-			<td><input type="submit" class="btn" value="7" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" value="8" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" value="9" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" id="btnsimb" value="/" onclick=" contatena('/');"/></td>
-		</tr>
-
-		<tr>
-			<td><input type="submit" class="btn" value="4" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" value="5" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" value="6" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" id="btnsimb" value="x" onclick=" contatena('*');"/></td>
-		</tr>
-
-		<tr>
-			<td><input type="submit" class="btn" value="1" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" value="2" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" value="3" onclick=" contatena(this.value);"/></td>
-			<td><input type="submit" class="btn" id="btnsimb" value="-" onclick=" contatena('-');"/></td>
-		</tr>
-
-		<tr>
-			<td><input type="submit" class="btn" value="." onclick=" contatena('.');"/></td>
-			<td><input type="submit" class="btn" value="0" onclick=" contatena(this.value);"/></td>
-			<td><input id="equal" style="background-color: #f52500" type="submit" id="butao" class="btn" value="=" onclick=" calcular();"/></td>
-			<td><input type="submit" class="btn" id="btnsimb" value="+" onclick=" contatena('+');"/></td>
-
-		</tr>
-
-	</table>
+			<tr>
+				<td><input type="submit" class="btn" value="." onclick=" contatena('.');" /></td>
+				<td><input type="submit" class="btn" value="0" onclick=" contatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="="
+						onclick=" calcular();" /></td>
+				<td><input type="submit" class="btnsimb" value="+" onclick=" contatena('+');" /></td>
+			</tr>
+		</table>
 	</div>
-	</div>
-	</body>
-	</html>
+	<script src="calculadora.js"></script>
+</body>
+
+</html>
