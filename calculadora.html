@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="calculadora.css">
-	<title>CALCULADORA</title>
+	<title>Calculadora basica</title>
 </head>
 
 <html>
@@ -19,35 +19,33 @@
 			<input type="text" id="formula" disabled/>
 			<input id="posiC" type="submit" class="btn" value="C" onclick=" limpar();" />
 		</div>
-
 		<table>
 			<tr>
-				<td><input type="submit" class="btn" value="7" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btn" value="8" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btn" value="9" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btnsimb" value="/" onclick=" contatena('/');" /></td>
+				<td><input type="submit" class="btn" value="7" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="8" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="9" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btnsimb" value="/" onclick=" concatena('/');" /></td>
 			</tr>
 
 			<tr>
-				<td><input type="submit" class="btn" value="4" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btn" value="5" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btn" value="6" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btnsimb" value="x" onclick=" contatena('*');" /></td>
+				<td><input type="submit" class="btn" value="4" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="5" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="6" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btnsimb" value="x" onclick=" concatena('*');" /></td>
 			</tr>
 
 			<tr>
-				<td><input type="submit" class="btn" value="1" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btn" value="2" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btn" value="3" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btnsimb" value="-" onclick=" contatena('-');" /></td>
+				<td><input type="submit" class="btn" value="1" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="2" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="3" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btnsimb" value="-" onclick=" concatena('-');" /></td>
 			</tr>
 
 			<tr>
-				<td><input type="submit" class="btn" value="." onclick=" contatena('.');" /></td>
-				<td><input type="submit" class="btn" value="0" onclick=" contatena(this.value);" /></td>
-				<td><input type="submit" class="btn" value="="
-						onclick=" calcular();" /></td>
-				<td><input type="submit" class="btnsimb" value="+" onclick=" contatena('+');" /></td>
+				<td><input type="submit" class="btn" value="." onclick=" concatena('.');" /></td>
+				<td><input type="submit" class="btn" value="0" onclick=" concatena(this.value);" /></td>
+				<td><input type="submit" class="btn" value="=" onclick=" calcular();" /></td>
+				<td><input type="submit" class="btnsimb" value="+" onclick=" concatena('+');" /></td>
 			</tr>
 		</table>
 	</div>

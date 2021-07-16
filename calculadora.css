@@ -11,18 +11,34 @@ table{
 
 input[type=text]{
     background-color: white;
-    width: 180px;
-    height: 30px;
+    width: 200px;
+    height: 40px;
     border-radius: 5px;
     outline-offset: auto;
-    
+    font-size: large;
+}
+
+.header{
+    padding-bottom: 10px;
+    margin: 0;
 }
 
 .header #posiC{
     background-color: #4193ca;
+    padding-left: 5px;
+    float: right;
+   
 }
+.header #posiC:hover{
+    background-color: #8dbfe0;
+}
+
+.header h1{
+    text-align: center;
+}
+
 input[type=submit]{
-    width: 35;
+    width: 50px;
     height: 40px;
     /*border: groove;*/
     border-radius: 15%;
@@ -32,11 +48,10 @@ input[type=submit]{
 .calculadora{
     background-color: rgba(255, 250, 250, 0.205);
     margin: 100px auto;
-    min-width: 220px;
+    min-width: 270px;
     max-width: 270px;
     padding: 10px;
     border-radius: 20px;
-    text-align: center;
 }
 
 .calculadora h1{
@@ -48,6 +63,7 @@ input[type=submit]{
 
 .btnsimb{
     background-color:tomato;
+    outline:0;
 }
 .btnsimb:hover{
     background-color: rgb(192, 30, 1);
@@ -57,18 +73,11 @@ input[type=submit]{
 td .btn {
     background-color: rgb(26, 25, 25);
     color: white;
+    width: 50px;
 }
 td .btn:hover{
     background-color: white;
     border-color: rgb(26, 25, 25);
     color: rgb(26, 25, 25);
-}
-}
-
-#posiC{
-    /*position: relative;
-    background-color: navajowhite;
-    top: -69;
-    left: 290;*/
 }
 

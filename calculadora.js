@@ -2,7 +2,7 @@ function limpar() {
     document.getElementById('formula').value = '';/*LIMPA A TEXT*/
 }
 
-function contatena(valor) {
+function concatena(valor) {
     document.getElementById('formula').value += valor; /*CONCATENA OS VALORES*/
 }
 
